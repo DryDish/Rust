@@ -10,4 +10,4 @@ Cargo.lock
 **/*.rs.bk
 
 # VS code 
-*/.vscode
+*/.vscode/
