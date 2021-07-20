@@ -1,0 +1,6 @@
+{
+    "execMap": {
+        "rs": "cargo run"
+    },
+    "delay": 500
+}
