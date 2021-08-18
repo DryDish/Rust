@@ -1,11 +1,13 @@
 mod control_flows;
 mod collections;
 mod structs;
+mod enums;
 
 // Can also import all with * instead of {fn_name}
 use crate::collections::{array_test, vector_test, tuple_test}; 
 use crate::control_flows::{if_control_flow, match_control_flow, match_control_flow_advanced, match_colors};
 use crate::structs::*;
+use crate::enums::*;
 
 
 fn main() {
@@ -30,6 +32,7 @@ fn main() {
     match_colors(255, 255, 1);
     match_colors(255, 255, 255);
     create_customer();
+    enums_test();
 }
 
 fn number() -> i32 {
