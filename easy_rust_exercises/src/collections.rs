@@ -100,3 +100,19 @@ pub fn tuple_test() {
     let (a, b, c) = (simple_arr[0], simple_arr[1], simple_arr[2]);
     println!("first: {}, second: {}, third: {}", a, b, c);
 }
+
+use std::{collections::HashMap};
+
+pub fn hashmap_test()
+{
+    let mut tokens =  HashMap::new();
+    tokens.insert("peter", "123456");
+    tokens.insert("test_user", "picture1");
+    tokens.insert("bob", "password");
+
+    let mut counter =0;
+    for pair in tokens {
+        counter += 1;
+        println!("number {}: {:?}", counter, pair);
+    }
+}

@@ -19,7 +19,7 @@ struct Address {
     post_code: u16,
 }
 
-struct Customer {
+pub struct Customer {
     name: String,
     age: u16,
     sex: char,
@@ -29,7 +29,7 @@ struct Customer {
 pub fn create_customer() {
     let mut customers: Vec<Customer> = Vec::new();
     let peter = Customer {
-        name: String::from("Peter Piper Piperson"),
+        name: String::from("Peter Piper Pe"),
         age: 25,
         sex: 'm',
         address: Address {
