@@ -10,6 +10,14 @@ pub struct Customer {
     address: Address,
 }
 
+use std::fmt::{Display, Formatter, Result};
+
+impl Display for Customer {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
+        write!(f, "({}, {}, , {}, {})", self.name, self.age, self.sex, self.address)
+    }
+}
+
 impl Customer {
     pub fn new() -> Self {
         Self {

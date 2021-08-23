@@ -5,6 +5,14 @@ pub struct Address {
     pub post_code: u16,
 }
 
+use std::fmt::{Display, Formatter, Result};
+
+impl Display for Address {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
+        write!(f, "({}, {}, {})", self.city, self.country, self.post_code)
+    }
+}
+
 impl Address {
     pub fn new() -> Self {
         Self {

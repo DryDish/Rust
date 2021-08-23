@@ -35,5 +35,10 @@ pub fn proper_structs_test()
     } = destructuring_var;
          
     println!("Testing_stuff variables: name: {} number: {} and arr: {:?}", a, b, c);
+
+    let address_3 = Address::from("city", "country", 1111);
+    let customer_3 = Customer::from("Customer Name", 20, 'x', address_3);
+    println!("Customer printed with Display trait: {}", customer_3);
+    
 }
 

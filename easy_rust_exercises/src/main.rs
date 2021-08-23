@@ -7,7 +7,7 @@ mod generics;
 mod option_and_result;
 
 // Can also import all with * instead of {fn_name}
-use crate::collections::{array_test, vector_test, tuple_test, hashmap_test}; 
+use crate::collections::{array_test, vector_test, tuple_test, hashmap_test, btreemap_test}; 
 use crate::control_flows::{if_control_flow, match_control_flow, match_control_flow_advanced, match_colors};
 use crate::structs::*;
 use crate::enums::*;
@@ -44,6 +44,7 @@ fn main() {
     option_test();
     result_test();
     hashmap_test();
+    btreemap_test();
 }
 
 fn number() -> i32 {

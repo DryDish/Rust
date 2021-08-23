@@ -103,16 +103,39 @@ pub fn tuple_test() {
 
 use std::{collections::HashMap};
 
+// Like regular hashmap, unsorted
 pub fn hashmap_test()
 {
     let mut tokens =  HashMap::new();
-    tokens.insert("peter", "123456");
+    tokens.insert("peter", "one_two_three");
     tokens.insert("test_user", "picture1");
     tokens.insert("bob", "password");
 
     let mut counter =0;
-    for pair in tokens {
+    for (key, pair) in &tokens {
         counter += 1;
-        println!("number {}: {:?}", counter, pair);
+        println!("number {} <| key: {: <15} pair: {: <15} |>", counter, &key, &pair);
     }
+
+    println!(" value of key 'peter': {}", &tokens["peter"]);
+}
+
+use std::{collections::BTreeMap};
+
+// Similar to HashMap, but sortable
+pub fn btreemap_test()
+{
+    println!();
+    let mut tokens =  BTreeMap::new();
+    tokens.insert("first", 123);
+    tokens.insert("second", 1234);
+    tokens.insert("third", 12345);
+
+    let mut counter =0;
+    for (key, pair) in &tokens {
+        counter += 1;
+        println!("number {} <| key: {: <15} pair: {: <15} |>", counter, key, pair);
+    }
+    
+
 }
