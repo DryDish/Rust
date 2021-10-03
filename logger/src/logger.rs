@@ -29,3 +29,7 @@ macro_rules! info {
         logger::crate_info!("{:<size$}{}", $message, $var, size = SIZE);
     };
 }
+
+pub fn init_logger(){
+    env_logger::builder().filter_level(log::LevelFilter::Debug).init();
+}
